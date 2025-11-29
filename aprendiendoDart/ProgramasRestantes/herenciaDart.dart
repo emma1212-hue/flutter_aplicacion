@@ -1,0 +1,29 @@
+class Animal {
+  String? nombre, raza;
+  int? tamanio;
+  Animal(this.nombre, this.raza, this.tamanio);
+  void comer() { 
+    print('$nombre está comiendo.');
+  }
+  void DameDatos() {
+    print('Nombre: $nombre, Raza: $raza, tamaño: $tamanio');
+  }
+}
+class Perro extends Animal {
+  Perro(String nombre, String raza, int tamanio)
+      : super(nombre, raza, tamanio);
+  @override
+  void comer() {
+    print('$nombre (el perro) está comiendo con energía.');
+  }
+  void DameDatos() {
+    print('Nombre: $nombre, Raza: $raza, tamaño: $tamanio');
+  }
+}
+void main() {
+  print("JOSE EMMANUEL RAMIREZ OLIVARES y DAMARIS AVILA PACHECO");
+  Animal objeto1 = Animal('Garfield', 'Angora', 50);
+  objeto1.comer(); 
+  Perro objeto2 = Perro('Firulais', 'Chiwawa', 25);
+  objeto2.comer();
+}
